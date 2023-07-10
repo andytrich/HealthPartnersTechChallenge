@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace HealthPartnersTechChallenge.Services
 {
-    public interface IFizzBuzzService
+    public class FizzBuzzService : IFizzBuzzService
     {
-        string GenerateFizzBuzz(int inputNumber);
+        public string GenerateFizzBuzz(int inputNumber)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
