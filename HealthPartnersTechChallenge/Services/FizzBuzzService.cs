@@ -11,6 +11,7 @@ namespace HealthPartnersTechChallenge.Services
     {
         public FizzBuzz GenerateFizzBuzz(int inputNumber)
         {
+            if (inputNumber % 3 == 0) { return FizzBuzz.Fizz; }
             throw new NotImplementedException();
         }
     }
