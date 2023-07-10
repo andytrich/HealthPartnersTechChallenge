@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HealthPartnersTechChallenge.Enum;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,6 @@ namespace HealthPartnersTechChallenge.Services
 {
     public interface IFizzBuzzService
     {
-        string GenerateFizzBuzz(int inputNumber);
+        FizzBuzz GenerateFizzBuzz(int inputNumber);
     }
 }
