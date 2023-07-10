@@ -37,5 +37,15 @@ namespace UnitTests
             //assert
             result.Should().Be(FizzBuzz.FizzBuzz);
         }
+        [Fact]
+        public void If_A_Number_Is_Not_Divisible_By_3_Or_5_Output_Should_Be_NoChange()
+        {
+            //arrange
+            var service = new FizzBuzzService();
+            //act
+            var result = service.GenerateFizzBuzz(1);
+            //assert
+            result.Should().Be(FizzBuzz.NoChange);
+        }
     }
 }
