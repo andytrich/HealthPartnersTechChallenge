@@ -10,6 +10,7 @@ namespace HealthPartnersTechChallenge.Enum
     {
         Fizz,
         Buzz,
-        FizzBuzz
+        FizzBuzz,
+        NoChange
     }
 }

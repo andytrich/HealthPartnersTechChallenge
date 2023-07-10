@@ -14,7 +14,7 @@ namespace HealthPartnersTechChallenge.Services
             if (inputNumber % 15 == 0) { return FizzBuzz.FizzBuzz; }
             if (inputNumber % 3 == 0) { return FizzBuzz.Fizz; }
             if (inputNumber % 5 == 0) { return FizzBuzz.Buzz; }
-            throw new NotImplementedException();
+            return FizzBuzz.NoChange;
         }
     }
 }
