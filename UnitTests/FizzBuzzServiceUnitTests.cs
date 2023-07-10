@@ -1,6 +1,7 @@
 using FluentAssertions;
 using HealthPartnersTechChallenge.Enum;
 using HealthPartnersTechChallenge.Services;
+using System.Collections;
 
 namespace UnitTests
 {
@@ -46,6 +47,25 @@ namespace UnitTests
             var result = service.GenerateFizzBuzz(1);
             //assert
             result.Should().Be(FizzBuzz.NoChange);
+        }
+
+        [Theory]
+        [MemberData(nameof(SetOfDivideByThree))]
+        public void If_A_Number_Is_Divisible_By_3_Output_Should_Be_Fizz_For_A_Range_From_1_To_100(int testNumber)
+        {
+            //arrange
+            var service = new FizzBuzzService();
+            //act
+            var result = service.GenerateFizzBuzz(testNumber);
+            //assert
+            result.Should().Be(FizzBuzz.Fizz);
+        }
+        public static IEnumerable<object[]> SetOfDivideByThree()
+        {
+            for (int i = 1; i < 100; i++)
+            {
+                if (i % 3 == 0) { yield return new object[] { i }; }                
+            }            
         }
     }
 }
