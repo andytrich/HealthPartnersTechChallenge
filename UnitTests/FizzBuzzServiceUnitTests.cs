@@ -31,9 +31,11 @@ namespace UnitTests
         public void If_A_Number_Is_Divisible_By_3_And_5_Output_Should_Be_FizzBuzz()
         {
             //arrange
+            var service = new FizzBuzzService();
             //act
+            var result = service.GenerateFizzBuzz(15);
             //assert
-            Assert.True(false);
+            result.Should().Be(FizzBuzz.FizzBuzz);
         }
     }
 }
