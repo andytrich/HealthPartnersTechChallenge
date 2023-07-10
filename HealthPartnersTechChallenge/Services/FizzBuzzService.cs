@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HealthPartnersTechChallenge.Enum;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ namespace HealthPartnersTechChallenge.Services
 {
     public class FizzBuzzService : IFizzBuzzService
     {
-        public string GenerateFizzBuzz(int inputNumber)
+        public FizzBuzz GenerateFizzBuzz(int inputNumber)
         {
             throw new NotImplementedException();
         }
