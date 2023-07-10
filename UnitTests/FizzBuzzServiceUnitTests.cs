@@ -35,7 +35,7 @@ namespace UnitTests
             //act
             var result = service.GenerateFizzBuzz(15);
             //assert
-            result.Should().Be(FizzBuzz.FizzBuzzz);
+            result.Should().Be(FizzBuzz.FizzBuzz);
         }
     }
 }
