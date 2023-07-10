@@ -103,5 +103,23 @@ namespace UnitTests
                 if (i % 15 == 0) { yield return new object[] { i }; }
             }
         }
+        [Theory]
+        [MemberData(nameof(SetOfAllOthers))]
+        public void If_A_Number_Is_Not_Divisible_By_3_Or_5_Output_Should_Be_NoChange_For_A_Range_From_1_To_100(int testNumber)
+        {
+            //arrange
+            var service = new FizzBuzzService();
+            //act
+            var result = service.GenerateFizzBuzz(testNumber);
+            //assert
+            result.Should().Be(FizzBuzz.NoChange);
+        }
+        public static IEnumerable<object[]> SetOfAllOthers()
+        {
+            for (int i = 1; i < 100; i++)
+            {
+                if (i % 3 != 0 && i % 5 != 0) { yield return new object[] { i }; }
+            }
+        }
     }
 }
