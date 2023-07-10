@@ -85,5 +85,23 @@ namespace UnitTests
                 if (i % 5 == 0 && i % 15 != 0) { yield return new object[] { i }; }
             }
         }
+        [Theory]
+        [MemberData(nameof(SetOfDivideByFifteen))]
+        public void If_A_Number_Is_Divisible_By_15_Output_Should_Be_FizzBuzz_For_A_Range_From_1_To_100(int testNumber)
+        {
+            //arrange
+            var service = new FizzBuzzService();
+            //act
+            var result = service.GenerateFizzBuzz(testNumber);
+            //assert
+            result.Should().Be(FizzBuzz.FizzBuzz);
+        }
+        public static IEnumerable<object[]> SetOfDivideByFifteen()
+        {
+            for (int i = 1; i < 100; i++)
+            {
+                if (i % 15 == 0) { yield return new object[] { i }; }
+            }
+        }
     }
 }
